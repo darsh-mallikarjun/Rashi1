@@ -1,5 +1,5 @@
 CREATE DATABASE  IF NOT EXISTS `rashi`;
-USE `employee_management`;
+USE `rashi`;
 
 --
 -- Table structure for table `user`

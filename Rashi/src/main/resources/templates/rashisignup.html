@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='' th:href="@{/CSS/rashisignup.css}">
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div th:if="${param.success}">You've successfully registered to our rashi</div>
+   
+    <div class="wrapper">
+        <form  th:action="@{/registartion}"  th:object="${user}" method="post">
+       <h4> <a href="rashiLogin.html" th:href="@{/rashiLogin.html}"><-</a>Sign Up</h4><br>
+       <img src="" class="profile" th:src="@{/img/rashisignup.png}" alt="" />
+            <div class="input-box">
+     <input type="text" th:field="*{name}" id="name" placeholder="Name" required/></div><br>
+     <div class="input-box">
+     <input type="email" th:field="*{email}" id="email" placeholder="Email" required/></div><br>
+     <div class="input-box">
+     <input type="password"  th:field="*{password}" id="password" placeholder="Password" required/></div><br>
+     <div class="input-box"> <select><option>IND +91</option></select> <input type="number" th:field="*{mobile}" id="number" placeholder="Mobile No." required/></div>
+     <div class="checkbox">
+        <input type="checkbox" class="form-check-input" id="Check1">
+        <label class="form-check-label" for="exampleCheck1">I agree to Rashi T&C, Privacy Policy, & Cookie Policy</label><br>
+        <button type="submit" class="btn">Sign Up</button>
+        <div class="login-link">
+            <p>Already registered?<a th:href="@{/login}">Login</a></p>
+      </div>
+    </div>
+   
+     </form>
+     </div>
+     
+</body>
+</html>

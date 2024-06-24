@@ -1,0 +1,135 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0 0 10px #000;
+  background: rgba(0,0,0,0.5);
+}
+#chk1{
+  display: none;
+}
+header .logo{
+flex: 1;
+color: #f2f2f2;
+margin-left: 50px;
+text-transform:uppercase ;
+
+}
+
+
+header ul{
+
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul li a{
+text-decoration:overline;
+color: #fff;
+font-weight: 600;
+text-transform: uppercase;
+padding: 10px 15px;
+}
+header ul li a:hover{
+  border-bottom: 2px solid blue;
+}
+
+body{
+  background: #434444;
+  color: #333;
+}
+
+.search-box{
+  width: 600px;
+  background: #fff;
+  margin: 200px auto 0;
+  border-radius: 5px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+
+input{
+  flex: 2.5;
+  height: 50px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: #434444;
+}
+
+button{
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+button i{
+  width: 20px;
+  color: #555;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 180px;
+
+}
+
+.autocomplete-wrapper ul{
+
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+  font-size: 18px;
+  color: #434444;
+
+}
+
+.autocomplete-wrapper ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+  
+}
+.autocomplete-wrapper ul li:hover{
+  background: #555;
+ 
+}
+.container{
+  padding-top: 50px;
+}
+
+.product-grid{
+  padding-bottom: 20px;
+  padding-top: 20px ;
+  background: #fff;
+}
+.product-grid:hover{
+  box-shadow:  0 4px 8px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.image{
+  position: relative;
+}
+.buy{
+  background-color: transparent;
+  color: #434444;
+  border-radius: 0;
+  border: 1px solid #434444;
+  width: 100%;
+  margin-top: 20px;
+
+}

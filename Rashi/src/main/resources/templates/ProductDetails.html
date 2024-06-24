@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='' th:href="@{/CSS/rashisignup.css}">
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <div th:if="${param.success}">You've successfully registered to our rashi</div>
+   
+    <div class="wrapper">
+        <form  th:action="@{/addproduct}"  th:object="${product}" method="post">
+       <img src="" class="profile" th:src="@{/img/rashisignup.png}" alt="" />
+            <div class="input-box">
+     <input type="number" th:field="*{price}" id="name" placeholder="Price" required/></div><br>
+     <div class="input-box">
+     <input type="text" th:field="*{address}" id="email" placeholder="Address" required/></div><br>
+     <div class="input-box">
+     <input type="text"  th:field="*{plot_area}" id="password" placeholder="plot_area" required/></div><br>
+     <div class="input-box">
+      <input type="text" th:field="*{dimensions}" id="number" placeholder="dimensions" required/></div><br>
+      <div class="input-box">
+      <input type="file" th:field="*{image}" id="number" placeholder="image" required/></div>
+     <div class="checkbox">
+        <input type="checkbox" class="form-check-input" id="Check1">
+        <label class="form-check-label" for="exampleCheck1">I agree to Rashi T&C, Privacy Policy, & Cookie Policy</label><br>
+        <button type="submit" class="btn">Sign Up</button>
+        <div class="login-link">
+            <p>Already registered?<a th:href="@{/login}">Login</a></p>
+      </div>
+    </div>
+   
+     </form>
+     </div>
+     
+</body>
+</html>

@@ -2,8 +2,31 @@ package com.rashi.webapp.dto;
 
 public class LoginUser {
 
+	
+	private String name;
 	private String email;
 	private String password;
+	
+	public LoginUser() {
+		
+		
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+
 	public String getEmail() {
 		return email;
 	}

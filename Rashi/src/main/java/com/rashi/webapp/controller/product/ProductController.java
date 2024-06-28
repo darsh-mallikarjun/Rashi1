@@ -13,22 +13,17 @@ import com.rashi.webapp.service.ProductService;
 
 @Controller
 @RequestMapping("/address")
-public class SearchProductController {
+public class ProductController {
 
 	private ProductService productservice;
 
-	public SearchProductController(ProductService productservice) {
+	public ProductController(ProductService productservice) {
 		super();
 		this.productservice = productservice;
 	}
 	
 	
 	@GetMapping("/welcome")
-	public String searchProduct() {
-		return "redirect:/address" ;
-	}
-	
-	@GetMapping
 	public String getUserByEmail(ProductPlotDto productPlotDto, Model model) {
 		List<ProductPlots> product =productservice.findByAddress(productPlotDto.getAddress());
 		List<ProductPlots> products = productservice.findAll();

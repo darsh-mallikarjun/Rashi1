@@ -12,7 +12,5 @@ public interface ProductService {
 	public List<ProductPlots>findAll();
 	
 	ProductPlots save(ProductPlotDto  productPlotDto);
-	
-
 
 }

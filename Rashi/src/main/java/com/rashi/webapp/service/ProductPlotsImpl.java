@@ -17,6 +17,13 @@ public class ProductPlotsImpl implements ProductService  {
 	@Autowired
 	private ProductPlotRepo productPlotReop;
 
+	public ProductPlotsImpl(ProductPlotRepo productPlotReop) {
+		super();
+		this.productPlotReop = productPlotReop;
+	}
+	
+	
+
 	@Override
 	public List<ProductPlots> findByAddress(String address ) {
 		return productPlotReop.findByAddress(address);

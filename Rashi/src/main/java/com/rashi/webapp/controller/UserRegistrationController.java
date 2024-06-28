@@ -23,11 +23,6 @@ public class UserRegistrationController {
 		this.userservice = userservice;
 	}
 	
-	@GetMapping("/welcome")
-	public String welcome() {
-		return "rashiwelcome" ;
-	}	
-	
 	
 	@ModelAttribute("user")
 	public UserRegistrationDTO userregistrationdto() {
@@ -42,7 +37,7 @@ public class UserRegistrationController {
 	@PostMapping
 	public String registerUser(@ModelAttribute("user") UserRegistrationDTO registration) {
 	userservice.save(registration);
-	return "redirect:/address";
+	return "redirect:/address/welcome";
 
 	
 }

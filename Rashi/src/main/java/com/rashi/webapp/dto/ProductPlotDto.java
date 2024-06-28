@@ -8,6 +8,11 @@ public class ProductPlotDto {
 	 private String plot_area;
 	 private String dimensions;
 	 private String image;
+	 
+	 
+	 public ProductPlotDto() {
+		 
+	 }
 
 	public int getId() {
 		return id;

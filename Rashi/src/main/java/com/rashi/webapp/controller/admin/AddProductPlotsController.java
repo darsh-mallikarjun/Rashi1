@@ -1,4 +1,4 @@
-package com.rashi.webapp.controller.product;
+package com.rashi.webapp.controller.admin;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
